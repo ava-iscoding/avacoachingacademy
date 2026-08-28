@@ -41,12 +41,20 @@ export function SiteFooter() {
             <p className="mt-5 text-sm leading-relaxed text-ivory/85">
               Not sure where to begin? Start with a brief introductory conversation.
             </p>
-            <Link
+           /* <Link
               to="/book"
               className="mt-6 inline-flex rounded-xs border border-ivory/40 px-6 py-3 text-[0.64rem] tracking-[0.24em] uppercase transition-colors hover:bg-ivory hover:text-charcoal"
             >
               Book a Session
-            </Link>
+            </Link>  */
+            <a
+              href="https://tidycal.com/coachava2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex rounded-xs border border-ivory/40 px-6 py-3 text-[0.64rem] tracking-[0.24em] uppercase transition-colors hover:bg-ivory hover:text-charcoal"
+            >
+              Book a Session
+            </a>
           </div>
         </div>
 
