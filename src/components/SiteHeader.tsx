@@ -45,12 +45,20 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3 lg:hidden">
-          <Link
+       /*   <Link
             to="/book"
             className="rounded-xs bg-charcoal px-4 py-2.5 text-[0.6rem] tracking-[0.2em] text-ivory uppercase"
           >
-            Book
-          </Link>
+            Book 
+          </Link> */
+          <a
+  href="https://tidycal.com/coachava2"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-xs bg-charcoal px-6 py-3 text-[0.66rem] tracking-[0.24em] text-ivory uppercase transition-colors hover:bg-charcoal/85"
+>
+  Book a Session
+</a>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -83,13 +91,21 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
-          <Link
+         /* <Link
             to="/book"
             onClick={() => setOpen(false)}
             className="mt-6 block rounded-xs bg-charcoal py-4 text-center text-[0.68rem] tracking-[0.26em] text-ivory uppercase"
           >
             Book a Session
-          </Link>
+          </Link> */
+          <a
+            href="https://tidycal.com/coachava2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xs bg-charcoal px-6 py-3 text-[0.66rem] tracking-[0.24em] text-ivory uppercase transition-colors hover:bg-charcoal/85"
+          >
+          Book a Session
+        </a>
         </nav>
       )}
     </header>
