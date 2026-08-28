@@ -39,7 +39,7 @@ function About() {
               height={1920}
               className="relative w-full object-cover shadow-[var(--shadow-soft)]"
             />
-          </figure>
+          </figure
           <div>
             <Eyebrow>About</Eyebrow>
             <Display as="h1">A curiosity that crossed disciplines</Display>
@@ -99,7 +99,7 @@ function About() {
                 ["Inner", "Meditation, reflection, emotional awareness, faith."],
                 ["Outer", "Career, environment, relationships, direction, action."],
                 ["Method", "Conversation, writing, movement, stillness, curiosity."],
-                ["Value", "Compassion, first and last."],
+                ["Value", "Faith is everything."],
               ].map(([k, v]) => (
                 <div key={k} className="border-b border-border pb-3">
                   <dt className="text-[0.68rem] tracking-[0.2em] uppercase">{k}</dt>
