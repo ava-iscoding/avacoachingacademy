@@ -19,7 +19,7 @@ export const Route = createFileRoute("/about")({
       },
       { property: "og:type", content: "profile" },
       { property: "og:url", content: "/about" },
-    ],
+    
     links: [{ rel: "canonical", href: "/about" }],
   }),
   component: About,
@@ -98,7 +98,7 @@ function About() {
               {[
                 ["Inner", "Meditation, reflection, emotional awareness, faith."],
                 ["Outer", "Career, environment, relationships, direction, action."],
-                ["Method", "Conversation, writing, movement, stillness, curiosity."],
+                ["Method", "Conversation, writing, movement, music, art, stillness, curiosity."],
                 ["Value", "Faith is everything."],
               ].map(([k, v]) => (
                 <div key={k} className="border-b border-border pb-3">
