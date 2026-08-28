@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Wordmark } from "./Wordmark";
@@ -7,7 +8,7 @@ const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/philosophy", label: "Philosophy" },
-   /* { to: "/services", label: "Services" }, */
+  /* { to: "/services", label: "Services" }, */
   { to: "/journal", label: "Journal" },
 ] as const;
 
@@ -23,7 +24,11 @@ export function SiteHeader() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
         <Wordmark />
 
-        <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">
+        {/* Desktop navigation */}
+        <nav
+          className="hidden items-center gap-9 lg:flex"
+          aria-label="Primary"
+        >
           {NAV.map((item) => (
             <Link
               key={item.to}
@@ -36,29 +41,52 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+
+          {/* OLD INTERNAL BOOKING LINK — kept for reference
           <Link
             to="/book"
             className="rounded-xs bg-charcoal px-6 py-3 text-[0.66rem] tracking-[0.24em] text-ivory uppercase transition-colors hover:bg-charcoal/85"
           >
             Book a Session
           </Link>
+          */}
+
+          <a
+            href="https://tidycal.com/coachava2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xs bg-charcoal px-6 py-3 text-[0.66rem] tracking-[0.24em] text-ivory uppercase transition-colors hover:bg-charcoal/85"
+          >
+            Book a Session
+          </a>
         </nav>
 
+        {/* Mobile header */}
         <div className="flex items-center gap-3 lg:hidden">
-       /*   <Link
+          {/* OLD MOBILE BOOK BUTTON — kept for reference
+          <Link
             to="/book"
             className="rounded-xs bg-charcoal px-4 py-2.5 text-[0.6rem] tracking-[0.2em] text-ivory uppercase"
           >
-            Book 
-          </Link> */
+            Book
+          </Link>
+          */}
+
+          {/*
+          DUPLICATE TIDYCAL MOBILE BUTTON REMOVED FROM HERE.
+
+          This was causing two booking buttons to appear on mobile:
+
           <a
-  href="https://tidycal.com/coachava2"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-xs bg-charcoal px-6 py-3 text-[0.66rem] tracking-[0.24em] text-ivory uppercase transition-colors hover:bg-charcoal/85"
->
-  Book a Session
-</a>
+            href="https://tidycal.com/coachava2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xs bg-charcoal px-6 py-3 text-[0.66rem] tracking-[0.24em] text-ivory uppercase transition-colors hover:bg-charcoal/85"
+          >
+            Book a Session
+          </a>
+          */}
+
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -67,17 +95,27 @@ export function SiteHeader() {
             className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 border border-border"
           >
             <span
-              className={cn("h-px w-5 bg-foreground transition-transform", open && "translate-y-[3px] rotate-45")}
+              className={cn(
+                "h-px w-5 bg-foreground transition-transform",
+                open && "translate-y-[3px] rotate-45"
+              )}
             />
             <span
-              className={cn("h-px w-5 bg-foreground transition-transform", open && "-translate-y-[3px] -rotate-45")}
+              className={cn(
+                "h-px w-5 bg-foreground transition-transform",
+                open && "-translate-y-[3px] -rotate-45"
+              )}
             />
           </button>
         </div>
       </div>
 
+      {/* Mobile menu */}
       {open && (
-        <nav className="border-t border-border bg-background px-6 pb-8 lg:hidden" aria-label="Mobile">
+        <nav
+          className="border-t border-border bg-background px-6 pb-8 lg:hidden"
+          aria-label="Mobile"
+        >
           <ul className="flex flex-col">
             {NAV.map((item) => (
               <li key={item.to}>
@@ -91,21 +129,26 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
-         /* <Link
+
+          {/* OLD MOBILE MENU BOOKING LINK — kept for reference
+          <Link
             to="/book"
             onClick={() => setOpen(false)}
             className="mt-6 block rounded-xs bg-charcoal py-4 text-center text-[0.68rem] tracking-[0.26em] text-ivory uppercase"
           >
             Book a Session
-          </Link> */
+          </Link>
+          */}
+
           <a
             href="https://tidycal.com/coachava2"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-xs bg-charcoal px-6 py-3 text-[0.66rem] tracking-[0.24em] text-ivory uppercase transition-colors hover:bg-charcoal/85"
+            onClick={() => setOpen(false)}
+            className="mt-6 block rounded-xs bg-charcoal py-4 text-center text-[0.68rem] tracking-[0.26em] text-ivory uppercase transition-colors hover:bg-charcoal/85"
           >
-          Book a Session
-        </a>
+            Book a Session
+          </a>
         </nav>
       )}
     </header>
