@@ -6,6 +6,7 @@ import writingImg from "@/assets/writing.jpg";
 import movementImg from "@/assets/movement.jpg";
 import stillnessImg from "@/assets/stillness.jpg";
 import knowledgeImg from "@/assets/knowledge.jpg";
+import { PianoPlayer } from "@/components/PianoPlayer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -74,6 +75,8 @@ const CARRIAGES = [
 function Home() {
   return (
     <>
+            <PianoPlayer />
+
       {/* HERO */}
       <section className="relative isolate overflow-hidden">
         <img
