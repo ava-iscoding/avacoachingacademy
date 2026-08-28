@@ -16,7 +16,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-md">
-      <p className="bg-charcoal px-4 py-2 text-center text-[0.58rem] tracking-[0.3em] text-ivory/80 uppercase sm:text-[0.62rem]">
+      <p className="bg-charcoal px-4 py-2 text-center text-[0.58rem] tracking-[0.3em] text-ivory/90 uppercase sm:text-[0.62rem]">
         In the name of God, the Compassionate, the Merciful
       </p>
 

@@ -7,17 +7,17 @@ export function SiteFooter() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <p className="font-display text-3xl tracking-[0.16em] uppercase">Ava Coaching Academy</p>
-            <p className="mt-4 text-xs tracking-[0.28em] text-ivory/60 uppercase">
+            <p className="mt-4 text-xs tracking-[0.28em] text-ivory/90 uppercase">
               Freedom • Knowledge • Expression • Stillness • Growth
             </p>
-            <p className="mt-8 max-w-md text-sm leading-relaxed text-ivory/70">
+            <p className="mt-8 max-w-md text-sm leading-relaxed text-ivory/85">
               A quiet space for people in transition — to think clearly, feel honestly,
               and continue becoming.
             </p>
           </div>
 
           <nav aria-label="Footer">
-            <p className="text-[0.62rem] tracking-[0.3em] text-ivory/50 uppercase">Explore</p>
+            <p className="text-[0.62rem] tracking-[0.3em] text-ivory/70 uppercase">Explore</p>
             <ul className="mt-5 space-y-3 text-sm text-ivory/80">
               {[
                 { to: "/", label: "Home" },
@@ -37,8 +37,8 @@ export function SiteFooter() {
           </nav>
 
           <div>
-            <p className="text-[0.62rem] tracking-[0.3em] text-ivory/50 uppercase">Begin</p>
-            <p className="mt-5 text-sm leading-relaxed text-ivory/70">
+            <p className="text-[0.62rem] tracking-[0.3em] text-ivory/70 uppercase">Begin</p>
+            <p className="mt-5 text-sm leading-relaxed text-ivory/85">
               Not sure where to begin? Start with a brief introductory conversation.
             </p>
             <Link
@@ -50,7 +50,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-ivory/15 pt-8 text-xs leading-relaxed text-ivory/45">
+        <div className="mt-16 border-t border-ivory/15 pt-8 text-xs leading-relaxed text-ivory/70">
           <p>
             Coaching and holistic guidance are not a substitute for medical, psychiatric,
             legal, or emergency services.
