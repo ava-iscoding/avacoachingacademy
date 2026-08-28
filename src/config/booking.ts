@@ -20,7 +20,7 @@
  */
 
 // Replace with Ava's actual TidyCal username
-export const TIDYCAL_USERNAME = "YOUR_TIDYCAL_USERNAME";
+export const TIDYCAL_USERNAME = "coachava2";
 
 // Replace with Ava's actual TidyCal booking page URL (used as the
 // graceful fallback link if the embedded calendar cannot load).
