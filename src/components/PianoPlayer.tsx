@@ -1,8 +1,25 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function PianoPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.volume = 0.18;
+
+    audio
+      .play()
+      .then(() => {
+        setPlaying(true);
+      })
+      .catch(() => {
+        // Browser blocked autoplay.
+        setPlaying(false);
+      });
+  }, []);
 
   const toggleMusic = async () => {
     const audio = audioRef.current;
@@ -25,7 +42,8 @@ export function PianoPlayer() {
         ref={audioRef}
         src="/audio/soft-piano.mp3"
         loop
-        preload="metadata"
+        autoPlay
+        preload="auto"
       />
 
       <button
