@@ -6,7 +6,6 @@ import writingImg from "@/assets/writing.jpg";
 import movementImg from "@/assets/movement.jpg";
 import stillnessImg from "@/assets/stillness.jpg";
 import knowledgeImg from "@/assets/knowledge.jpg";
-import avaPortrait from "@/assets/ava-portrait.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -117,7 +116,7 @@ function Home() {
           <figure className="rise relative mx-auto w-full max-w-sm">
             <div aria-hidden className="absolute -inset-3 border border-gold/40" />
             <img
-              src={avaPortrait.url}
+              src="/images/ava-portrait.jpg"
               alt="Ava, founder of Ava Coaching Academy"
               width={1280}
               height={1920}
@@ -185,7 +184,7 @@ function Home() {
               Freedom is not the absence of responsibility.
               <span className="mt-3 block italic text-gold">It is the ability to live consciously.</span>
             </h2>
-            <p className="mt-8 max-w-lg text-base leading-[1.95] text-ivory/70">
+            <p className="mt-8 max-w-lg text-base leading-[1.95] text-ivory/85">
               Freedom rarely arrives as a dramatic escape. More often it arrives as a quiet
               widening — a little more room between what happens and how you respond.
             </p>
@@ -389,7 +388,7 @@ function Home() {
           <h2 className="mt-6 text-4xl leading-[1.1] sm:text-6xl">
             Joy is also <span className="italic text-gold">knowledge</span>
           </h2>
-          <p className="mt-8 text-base leading-[1.95] text-ivory/70">
+          <p className="mt-8 text-base leading-[1.95] text-ivory/85">
             Transformation is not meant to be endless emotional work. Life is also meant to be
             experienced. Sometimes joy is simply telling you where you belong.
           </p>
@@ -403,7 +402,7 @@ function Home() {
             "What environments expand you?",
             "What people allow you to become more yourself?",
           ].map((q) => (
-            <li key={q} className="border-b border-ivory/15 pb-4 font-display text-xl text-ivory/90">
+            <li key={q} className="border-b border-ivory/15 pb-4 font-display text-xl text-ivory">
               {q}
             </li>
           ))}
