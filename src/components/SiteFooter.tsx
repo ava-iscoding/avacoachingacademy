@@ -25,7 +25,7 @@ export function SiteFooter() {
                 { to: "/philosophy", label: "Philosophy" },
                 { to: "/services", label: "Services" },
                 { to: "/journal", label: "Journal" },
-                { to: "/book", label: "Book a Session" },
+                { href: "https://tidycal.com/coachava2", label: "Book a Session" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="transition-opacity hover:opacity-60">
