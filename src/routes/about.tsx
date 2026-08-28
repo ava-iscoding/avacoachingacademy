@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Ava's path has crossed mathematics, technology, medicine, Chinese medicine, coaching, spirituality, writing and creativity — all of it about understanding people, patterns and change.",
+          "Ava's path has crossed mathematics, technology,  Chinese medicine, coaching, spirituality, writing and creativity — all of it about understanding people, patterns and change.",
       },
       { property: "og:title", content: "About Ava — Freedom & Knowledge Coach" },
       {
