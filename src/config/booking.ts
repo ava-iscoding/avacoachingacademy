@@ -45,7 +45,7 @@ export type BookingType = {
 };
 
 export const BOOKING_TYPES: BookingType[] = [
-  {
+ /* {
     id: "introductory",
     title: "Introductory Consultation",
     duration: "20 minutes",
@@ -54,7 +54,7 @@ export const BOOKING_TYPES: BookingType[] = [
     description:
       "A short introductory conversation to understand your goals and see whether Ava Coaching Academy is the right space for you.",
     path: "YOUR_TIDYCAL_BOOKING_PATH_INTRODUCTORY",
-  },
+  }, */
   {
     id: "thirty",
     title: "30-Minute Coaching Session",
@@ -75,7 +75,7 @@ export const BOOKING_TYPES: BookingType[] = [
       "A deeper conversation with room for reflection, exploration, emotional processing, and considered strategy.",
     path: "YOUR_TIDYCAL_BOOKING_PATH_60MIN",
   },
-  {
+ /* {
     id: "freedom-clarity",
     title: "Freedom & Clarity Session",
     duration: "60 minutes",
@@ -84,7 +84,7 @@ export const BOOKING_TYPES: BookingType[] = [
     description:
       "For identifying what feels restrictive, confusing, emotionally heavy, or simply out of alignment with who you are becoming.",
     path: "YOUR_TIDYCAL_BOOKING_PATH_FREEDOM",
-  },
+  }, 
   {
     id: "creative",
     title: "Creative Expression Session",
@@ -114,8 +114,8 @@ export const BOOKING_TYPES: BookingType[] = [
     description:
       "For those moving through career, relationship, identity, or location change — and trying to understand who they are becoming.",
     path: "YOUR_TIDYCAL_BOOKING_PATH_TRANSITION",
-  },
-];
+  }, */
+]; 
 
 /** Full external URL for a booking type (used for fallback links). */
 export function bookingUrl(type?: BookingType) {
