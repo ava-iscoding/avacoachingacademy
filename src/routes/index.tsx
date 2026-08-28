@@ -468,7 +468,7 @@ function Home() {
           <p className="eyebrow text-ivory/50">Joy</p>
 
           <h2 className="mt-6 text-4xl leading-[1.1] sm:text-6xl">
-            Joy is also <span className="italic text-gold">knowledge</span>
+            <span className="italic text-gold">Joys is also knowledge</span>
           </h2>
 
           <p className="mt-8 text-base leading-[1.95] text-ivory/85">
