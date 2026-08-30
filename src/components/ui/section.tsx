@@ -104,7 +104,11 @@ export function LinkButton({
   className?: string;
 }) {
   return (
-    <Link to={to} hash={hash} className={cn(buttonBase, buttonTones[tone], className)}>
+    <Link
+      to={to}
+      {...(hash ? { hash } : {})}
+      className={cn(buttonBase, buttonTones[tone], className)}
+    >
       {children}
     </Link>
   );
