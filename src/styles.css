@@ -220,6 +220,28 @@
   }
 }
 
+@keyframes ava-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility marquee {
+  animation: ava-marquee 60s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @utility rise {
   animation: ava-rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
