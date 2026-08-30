@@ -7,6 +7,7 @@ import movementImg from "@/assets/movement.jpg";
 import stillnessImg from "@/assets/stillness.jpg";
 import knowledgeImg from "@/assets/knowledge.jpg";
 import { PianoPlayer } from "@/components/PianoPlayer";
+import { Testimonials } from "@/components/Testimonials";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -549,6 +550,9 @@ function Home() {
           </article>
         </div>
       </Section>
+
+      {/* TESTIMONIALS */}
+      <Testimonials />
 
       {/* CLOSING CTA */}
       <Section tone="sand" className="text-center">
