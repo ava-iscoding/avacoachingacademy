@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section, Eyebrow, Display, Lede, BookButton, GoldRule } from "@/components/ui/section";
+import { Section, Eyebrow, Display, Lede, GoldRule } from "@/components/ui/section";
 import trainImg from "@/assets/train-ascension.jpg";
 import stillnessImg from "@/assets/stillness.jpg";
 import hero from "@/assets/hero-garden.jpg";
@@ -334,7 +334,14 @@ function Philosophy() {
         <div className="text-center">
           <p className="font-display text-3xl">Where are you in your own cycle?</p>
           <div className="mt-8 flex justify-center">
-            <BookButton tone="solid" />
+            <a
+              href="https://tidycal.com/coachava2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-xs border border-charcoal bg-charcoal px-6 py-3 text-[0.64rem] tracking-[0.24em] uppercase text-ivory transition-colors hover:bg-ivory hover:text-charcoal"
+            >
+              Book a Session
+            </a>
           </div>
         </div>
       </Section>
