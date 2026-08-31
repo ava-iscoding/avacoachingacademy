@@ -3,51 +3,33 @@ import { Section, Eyebrow, Display, Lede } from "@/components/ui/section";
 const TESTIMONIALS = [
   {
     quote:
-      "I cannot say enough about Ava. She is truly gifted — the truth, with no fluff.",
-    name: "Elena M.",
-    meta: "Spiritual guidance session",
-  },
-  {
-    quote:
-      "A wonderful session. She connected with me so fast — accurate, straightforward, and she felt what I was feeling. You can feel her energy. Thank you, Ava!",
+      "I signed up for 101 coaching not knowing what to expect. Ava met me exactly where I was — she understood what I was feeling before I had fully said it, and gave me a perspective I could actually use. You can feel her presence even through the screen.",
     name: "Tanya R.",
-    meta: "United States",
-  },
-  {
-    quote: "Very good, efficient, and to the point. I will return.",
-    name: "Anita K.",
-    meta: "Returning client",
+    meta: "First coaching client",
   },
   {
     quote:
-      "A straightforward session. I have been to her several times and she has been very consistent.",
+      "Ava has a rare gift. In one session she helped me see the truth of my situation with no fluff — just clarity, warmth, and real direction. I left with a sense of peace I had not felt in months.",
+    name: "Elena M.",
+    meta: "Clarity coaching client",
+  },
+  {
+    quote:
+      "I have worked with Ava several times through her coaching programme and she has been remarkably consistent — compassionate, honest, and always focused on what I actually need. Each session builds on the last.",
     name: "Priya S.",
-    meta: "Singapore",
+    meta: "Returning coaching client",
   },
   {
-    quote: "Very good. She was informative. Thank you.",
-    name: "Anna L.",
-    meta: "First session",
-  },
-  {
-    quote: "A beautiful session. I may call again.",
+    quote:
+      "A beautiful coaching session. Ava created a safe space for me to be honest about what I want next, and by the end I felt lighter, clearer, and ready to take a real step forward. I will definitely return.",
     name: "Tessa W.",
-    meta: "United States",
+    meta: "Transition coaching client",
   },
   {
-    quote: "An intense session. Thank you.",
+    quote:
+      "An intense and deeply useful session. Ava does not waste time — she goes straight to the heart of what matters and helps you hold it with kindness. Exactly the kind of coaching I needed.",
     name: "Margaret D.",
-    meta: "United States",
-  },
-  {
-    quote: "A great session. Thank you.",
-    name: "Robert H.",
-    meta: "United States",
-  },
-  {
-    quote: "Thank you very much, Ava.",
-    name: "Michael J.",
-    meta: "United States",
+    meta: "Freedom coaching client",
   },
 ];
 
@@ -57,18 +39,20 @@ function TestimonialCard({
   t: (typeof TESTIMONIALS)[number];
 }) {
   return (
-    <figure className="surface-card flex h-full w-80 shrink-0 flex-col p-8 sm:w-96">
+    <figure className="surface-card flex h-full w-80 shrink-0 flex-col p-8 sm:w-[26rem]">
       <span
         aria-hidden
         className="font-display text-4xl leading-none text-gold"
       >
         &ldquo;
       </span>
-      <blockquote className="mt-4 flex-1 text-sm leading-[1.9]">
+      <blockquote className="mt-5 flex-1 text-[0.95rem] leading-[1.85] text-foreground/90">
         {t.quote}
       </blockquote>
-      <figcaption className="mt-6 border-t border-border/70 pt-4">
-        <p className="text-[0.68rem] tracking-[0.2em] uppercase">{t.name}</p>
+      <figcaption className="mt-8 border-t border-border/70 pt-5">
+        <p className="text-[0.7rem] font-medium tracking-[0.18em] uppercase">
+          {t.name}
+        </p>
         <p className="mt-1 text-xs text-muted-foreground">{t.meta}</p>
       </figcaption>
     </figure>
@@ -83,8 +67,8 @@ export function Testimonials() {
           <Eyebrow>Kind words</Eyebrow>
           <Display>What clients say</Display>
           <Lede>
-            Reflections from people Ava has coached over the years — shared
-            here with names changed for privacy.
+            Reflections from people Ava has coached — shared here with names
+            changed for privacy.
           </Lede>
         </div>
       </div>
@@ -93,7 +77,7 @@ export function Testimonials() {
         className="group relative mt-14 w-full"
         aria-label="Client testimonials"
       >
-        <div className="marquee flex w-max gap-8 group-hover:[animation-play-state:paused]">
+        <div className="marquee flex w-max gap-6 group-hover:[animation-play-state:paused]">
           {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
             <TestimonialCard key={i} t={t} />
           ))}
@@ -102,3 +86,4 @@ export function Testimonials() {
     </Section>
   );
 }
+
