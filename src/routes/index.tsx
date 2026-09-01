@@ -156,6 +156,9 @@ function Home() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <Testimonials />
+
       {/* TIME NEVER STOPS */}
       <Section tone="sand">
         <div className="grid gap-14 md:grid-cols-2 md:items-end">
@@ -550,9 +553,6 @@ function Home() {
           </article>
         </div>
       </Section>
-
-      {/* TESTIMONIALS */}
-      <Testimonials />
 
       {/* CLOSING CTA */}
       <Section tone="sand" className="text-center">
