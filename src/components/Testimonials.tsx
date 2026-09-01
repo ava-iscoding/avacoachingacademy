@@ -3,33 +3,33 @@ import { Section, Eyebrow, Display, Lede } from "@/components/ui/section";
 const TESTIMONIALS = [
   {
     quote:
-      "I signed up for 101 coaching not knowing what to expect. Ava met me exactly where I was — she understood what I was feeling before I had fully said it, and gave me a perspective I could actually use. You can feel her presence even through the screen.",
+      "Very good, efficient and to the point. I left with exactly what I needed and I will return. Ava was informative and generous with her time — a truly worthwhile 1-1 coaching session.",
     name: "Tanya R.",
-    meta: "First coaching client",
+    meta: "1-1 coaching client",
   },
   {
     quote:
-      "Ava has a rare gift. In one session she helped me see the truth of my situation with no fluff — just clarity, warmth, and real direction. I left with a sense of peace I had not felt in months.",
+      "I cannot say enough about Ava. She is definitely gifted. In our 1-1 session she gave me the truth with no fluff, but held it with warmth. I left with a sense of peace I had not felt in months.",
     name: "Elena M.",
-    meta: "Clarity coaching client",
+    meta: "1-1 coaching client",
   },
   {
     quote:
-      "I have worked with Ava several times through her coaching programme and she has been remarkably consistent — compassionate, honest, and always focused on what I actually need. Each session builds on the last.",
+      "Straightforward and consistent. I have worked with Ava a few times now through her 1-1 coaching and she is always focused on what I actually need. Each session builds on the last.",
     name: "Priya S.",
-    meta: "Returning coaching client",
+    meta: "Returning 1-1 coaching client",
   },
   {
     quote:
-      "A beautiful coaching session. Ava created a safe space for me to be honest about what I want next, and by the end I felt lighter, clearer, and ready to take a real step forward. I will definitely return.",
+      "A beautiful 1-1 coaching session. Ava connected with me so fast — you can feel her energy and presence even through the screen. Accurate, straightforward, and deeply encouraging. I will definitely return.",
     name: "Tessa W.",
-    meta: "Transition coaching client",
+    meta: "1-1 coaching client",
   },
   {
     quote:
-      "An intense and deeply useful session. Ava does not waste time — she goes straight to the heart of what matters and helps you hold it with kindness. Exactly the kind of coaching I needed.",
+      "An intense and useful 1-1 session. Ava goes straight to the heart of what matters and helps you hold it with kindness. Exactly the kind of coaching I needed.",
     name: "Margaret D.",
-    meta: "Freedom coaching client",
+    meta: "1-1 coaching client",
   },
 ];
 
