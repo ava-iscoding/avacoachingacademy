@@ -551,9 +551,6 @@ function Home() {
         </div>
       </Section>
 
-      {/* TESTIMONIALS */}
-      <Testimonials />
-
       {/* CLOSING CTA */}
       <Section tone="sand" className="text-center">
         <Eyebrow>One step</Eyebrow>
