@@ -471,7 +471,7 @@ function Home() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow text-ivory/50">Joy</p>
 
-          <h2 className="mt-6 text-4xl leading-[1.1] sm:text-6xl">
+          <h2 className="mt-6 text-4xl leading-[1.1] text-ivory sm:text-6xl">
             <span className="italic text-gold">Joy is also knowledge</span>
           </h2>
 

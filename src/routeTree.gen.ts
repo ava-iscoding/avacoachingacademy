@@ -15,6 +15,7 @@ import { Route as BookRouteImport } from './routes/book'
 import { Route as JournalRouteImport } from './routes/journal'
 import { Route as PhilosophyRouteImport } from './routes/philosophy'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as WorkshopRouteImport } from './routes/workshop'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkshopRoute = WorkshopRouteImport.update({
+  id: '/workshop',
+  path: '/workshop',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/journal': typeof JournalRoute
   '/philosophy': typeof PhilosophyRoute
   '/services': typeof ServicesRoute
+  '/workshop': typeof WorkshopRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/journal': typeof JournalRoute
   '/philosophy': typeof PhilosophyRoute
   '/services': typeof ServicesRoute
+  '/workshop': typeof WorkshopRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,12 +79,27 @@ export interface FileRoutesById {
   '/journal': typeof JournalRoute
   '/philosophy': typeof PhilosophyRoute
   '/services': typeof ServicesRoute
+  '/workshop': typeof WorkshopRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/book' | '/journal' | '/philosophy' | '/services'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/book'
+    | '/journal'
+    | '/philosophy'
+    | '/services'
+    | '/workshop'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/book' | '/journal' | '/philosophy' | '/services'
+  to:
+    | '/'
+    | '/about'
+    | '/book'
+    | '/journal'
+    | '/philosophy'
+    | '/services'
+    | '/workshop'
   id:
     | '__root__'
     | '/'
@@ -85,6 +108,7 @@ export interface FileRouteTypes {
     | '/journal'
     | '/philosophy'
     | '/services'
+    | '/workshop'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -94,6 +118,7 @@ export interface RootRouteChildren {
   JournalRoute: typeof JournalRoute
   PhilosophyRoute: typeof PhilosophyRoute
   ServicesRoute: typeof ServicesRoute
+  WorkshopRoute: typeof WorkshopRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -140,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/workshop': {
+      id: '/workshop'
+      path: '/workshop'
+      fullPath: '/workshop'
+      preLoaderRoute: typeof WorkshopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -150,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   JournalRoute: JournalRoute,
   PhilosophyRoute: PhilosophyRoute,
   ServicesRoute: ServicesRoute,
+  WorkshopRoute: WorkshopRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
