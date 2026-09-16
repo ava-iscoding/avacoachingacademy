@@ -45,10 +45,10 @@ function About() {
               className="absolute -inset-3 border border-gold/50"
             />
             <img
-              src="/images/ava-portrait.jpg"
+              src="/images/ava-about.jpg"
               alt="Ava, founder of Ava Coaching Academy"
-              width={1280}
-              height={1920}
+              width={1023}
+              height={1537}
               className="relative w-full object-cover shadow-[var(--shadow-soft)]"
             />
           </figure>
