@@ -297,7 +297,7 @@ function Workshop() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow text-ivory/50">For parents</p>
 
-          <h2 className="mt-6 text-4xl leading-[1.1] sm:text-5xl">
+          <h2 className="mt-6 text-4xl leading-[1.1] text-ivory sm:text-5xl">
             A safe, gentle space
             <span className="block italic text-gold">built on trust</span>
           </h2>
