@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section, Eyebrow, Display, Lede, LinkButton, GoldRule } from "@/components/ui/section";
+import { BookGrid } from "@/components/BookGrid";
+import { CHILDREN_BOOKS, ADULT_BOOKS } from "@/config/books";
 import heroGarden from "@/assets/hero-garden.jpg";
 import trainImg from "@/assets/train-ascension.jpg";
 import writingImg from "@/assets/writing.jpg";
@@ -554,7 +556,31 @@ function Home() {
         </div>
       </Section>
 
+      {/* BOOKS */}
+      <Section>
+        <Eyebrow>Books</Eyebrow>
+        <h2 className="mt-5 text-3xl sm:text-4xl">Books by Ava Naeini</h2>
+        <Lede className="text-base">
+          Stories and workbooks for children, and reflective writing for adults.
+        </Lede>
+
+        <h3 className="mt-14 text-[0.64rem] tracking-[0.28em] text-muted-foreground uppercase">
+          For children
+        </h3>
+        <BookGrid books={CHILDREN_BOOKS} />
+
+        <h3 className="mt-16 text-[0.64rem] tracking-[0.28em] text-muted-foreground uppercase">
+          For adults
+        </h3>
+        <BookGrid books={ADULT_BOOKS} />
+
+        <div className="mt-12 flex justify-center">
+          <LinkButton to="/books">See all books</LinkButton>
+        </div>
+      </Section>
+
       {/* CLOSING CTA */}
+
       <Section tone="sand" className="text-center">
         <Eyebrow>One step</Eyebrow>
 
