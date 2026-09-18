@@ -24,7 +24,7 @@ export function SiteFooter() {
                 { to: "/about", label: "About Ava" },
                 { to: "/philosophy", label: "Philosophy" },
                  /* { to: "/services", label: "Services" }, */
-                { to: "/workshop", label: "Children's Art Workshop" },
+                { to: "/workshop", label: "Workshops" },
                 { to: "/books", label: "Books" },
                 { to: "/journal", label: "Journal" },
                /* { href: "https://tidycal.com/coachava2", label: "Book a Session" }, */

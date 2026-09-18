@@ -1,8 +1,8 @@
-import emojisFunCover from "@/assets/books/emojis-fun.jpg.asset.json";
-import magicalFriendsCover from "@/assets/books/magical-friends.jpg.asset.json";
-import newAgeLanguageCover from "@/assets/books/new-age-language.jpg.asset.json";
-import persianCalligraphyCover from "@/assets/books/persian-calligraphy.jpg.asset.json";
-import princessOfPersiaCover from "@/assets/books/princess-of-persia.jpg.asset.json";
+import emojisFunCover from "@/assets/books/emojis-fun.jpg";
+import magicalFriendsCover from "@/assets/books/magical-friends.jpg";
+import newAgeLanguageCover from "@/assets/books/new-age-language.jpg";
+import persianCalligraphyCover from "@/assets/books/persian-calligraphy.jpg";
+import princessOfPersiaCover from "@/assets/books/princess-of-persia.jpg";
 
 export type Book = {
   title: string;
@@ -21,7 +21,7 @@ export const CHILDREN_BOOKS: Book[] = [
       "A playful picture book that helps children name what they feel — turning everyday emotions into something they can recognise, talk about and share.",
     href: "https://a.co/d/0cRZL7f4",
     store: "Amazon",
-    cover: emojisFunCover.url,
+    cover: emojisFunCover,
   },
   {
     title: "Magical Friends",
@@ -30,7 +30,7 @@ export const CHILDREN_BOOKS: Book[] = [
       "Four gentle companions guide young readers through friendship, courage and kindness — stories written to build imagination and self-belief.",
     href: "https://a.co/d/0b5LpshF",
     store: "Amazon",
-    cover: magicalFriendsCover.url,
+    cover: magicalFriendsCover,
   },
   {
     title: "Learning Persian Calligraphy",
@@ -39,7 +39,7 @@ export const CHILDREN_BOOKS: Book[] = [
       "A calm, hands-on workbook introducing the beauty of Persian script — patience, focus and heritage practised one stroke at a time.",
     href: "https://a.co/d/0iYbxAuT",
     store: "Amazon",
-    cover: persianCalligraphyCover.url,
+    cover: persianCalligraphyCover,
   },
   {
     title: "The New Age Language Definitions",
@@ -47,7 +47,7 @@ export const CHILDREN_BOOKS: Book[] = [
       "A clear, child-friendly guide to the words of modern spiritual and emotional life, so young readers can understand the language around them.",
     href: "https://a.co/d/02jFzG9Q",
     store: "Amazon — Kindle",
-    cover: newAgeLanguageCover.url,
+    cover: newAgeLanguageCover,
   },
   {
     title: "The Princess of Persia",
@@ -56,7 +56,7 @@ export const CHILDREN_BOOKS: Book[] = [
       "A hardcover tale of bravery, heritage and heart — a young princess discovers that true strength begins with knowing who she is.",
     href: "https://www.lulu.com/shop/ava-naeini-and-ava-naeini/the-princess-of-persia-artemis-and-the-dragon/hardcover/product-84wkqre.html",
     store: "Lulu — Hardcover",
-    cover: princessOfPersiaCover.url,
+    cover: princessOfPersiaCover,
   },
 ];
 

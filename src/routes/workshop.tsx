@@ -1,26 +1,30 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section, Eyebrow, Display, Lede, GoldRule } from "@/components/ui/section";
+import { TIDYCAL_FALLBACK_URL } from "@/config/booking";
 import heroImg from "@/assets/workshop-hero.jpg";
 import suppliesImg from "@/assets/workshop-supplies.jpg";
 import artWallImg from "@/assets/workshop-art.jpg";
+import soundbathMeditationImg from "@/assets/workshops/soundbath-meditation-beach.jpg";
+import soundbathBowlsImg from "@/assets/workshops/soundbath-crystal-bowls.jpg";
 
 export const Route = createFileRoute("/workshop")({
   head: () => ({
     meta: [
-      { title: "Children's Art Workshop — Ava Coaching Academy" },
+      { title: "Children's & Soundbath Workshops — Ava Coaching Academy" },
       {
         name: "description",
         content:
-          "A healing, hope-filled art workshop for children led by Ava Naeini — spiritual coach, teacher and healer. Creativity, communication, ethics, faith and self-love.",
+          "Children's art workshops and restorative soundbath meditation workshops with Ava Naeini — creative spaces for healing, hope, self-love and stillness.",
       },
-      { property: "og:title", content: "Children's Art Workshop — Ava Coaching Academy" },
+      { property: "og:title", content: "Workshops — Ava Coaching Academy" },
       {
         property: "og:description",
         content:
-          "Empowering children through creativity, communication, ethics, faith-based teaching and self-love. A gentle space for healing and hope.",
+          "Explore children's art workshops and soundbath meditation workshops with Ava Naeini — gentle spaces for creativity, healing, hope and stillness.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/workshop" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/workshop" }],
   }),
@@ -82,8 +86,36 @@ const SUPPLIES_TO_BRING = [
 function Workshop() {
   return (
     <>
+      <Section tone="dawn" className="py-16 md:py-20">
+        <div className="max-w-3xl">
+          <Eyebrow>Workshops with Ava Naeini</Eyebrow>
+          <Display as="h1">Creative spaces for healing, hope and stillness</Display>
+          <Lede>
+            Explore art-led experiences for children and restorative soundbath
+            meditation workshops, each guided with care, faith and intention.
+          </Lede>
+        </div>
+
+        <nav aria-label="Workshop categories" className="mt-10 grid gap-px border border-border bg-border sm:grid-cols-2">
+          <a
+            href="#children-workshops"
+            className="bg-card p-7 transition-colors hover:bg-secondary"
+          >
+            <span className="eyebrow">01</span>
+            <span className="mt-3 block font-display text-2xl">Children’s Workshops</span>
+          </a>
+          <a
+            href="#soundbath-workshops"
+            className="bg-card p-7 transition-colors hover:bg-secondary"
+          >
+            <span className="eyebrow">02</span>
+            <span className="mt-3 block font-display text-2xl">Soundbath Meditation Workshops</span>
+          </a>
+        </nav>
+      </Section>
+
       {/* HERO */}
-      <section className="relative isolate overflow-hidden">
+      <section id="children-workshops" className="relative isolate scroll-mt-32 overflow-hidden">
         <img
           src={heroImg}
           alt="A child's hands painting a bright watercolour garden with jars of colourful paint"
@@ -96,7 +128,7 @@ function Workshop() {
 
         <div className="relative mx-auto w-full max-w-6xl px-6 py-24 sm:px-10 md:py-36">
           <div className="max-w-3xl rise">
-            <Eyebrow>A Workshop for Children · With Ava Naeini</Eyebrow>
+            <Eyebrow>Children’s Workshops · With Ava Naeini</Eyebrow>
 
             <h1 className="mt-6 text-[2.6rem] leading-[1.04] sm:text-6xl md:text-7xl">
               Healing and hope,
@@ -337,6 +369,66 @@ function Workshop() {
 
           <GoldRule className="mx-auto mt-16 max-w-sm" />
         </div>
+      </Section>
+
+      {/* SOUNDBATH MEDITATION WORKSHOPS */}
+      <Section id="soundbath-workshops" tone="dawn" className="scroll-mt-32">
+        <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+          <div>
+            <Eyebrow>Soundbath Meditation Workshops</Eyebrow>
+            <Display>Rest in sound. Return to stillness.</Display>
+            <Lede>
+              A gentle, restorative workshop shaped by crystal singing bowls,
+              meditation and the natural rhythm of breath. Ava creates a calm
+              space to slow down, listen inward and reconnect with a quieter
+              sense of presence.
+            </Lede>
+            <p className="mt-6 text-base leading-[1.95] text-muted-foreground">
+              Soundbath meditation workshops can be arranged for individuals,
+              private groups and community gatherings. Begin with a consultation
+              to discuss the setting, group and intention for your workshop.
+            </p>
+            <a
+              href={TIDYCAL_FALLBACK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-9 inline-flex items-center justify-center rounded-xs bg-charcoal px-8 py-4 text-[0.7rem] tracking-[0.26em] text-ivory uppercase transition-colors hover:bg-charcoal/85"
+            >
+              Book a Consultation
+            </a>
+          </div>
+
+          <figure className="relative">
+            <div aria-hidden className="absolute -inset-3 border border-gold/40" />
+            <img
+              src={soundbathBowlsImg}
+              alt="Ava leading a soundbath meditation with colourful crystal singing bowls beside the ocean"
+              width={1800}
+              height={1200}
+              loading="lazy"
+              className="relative aspect-[3/2] w-full object-cover shadow-[var(--shadow-lift)]"
+            />
+          </figure>
+        </div>
+
+        <figure className="mt-16 grid gap-6 md:grid-cols-[1.35fr_0.65fr] md:items-end">
+          <img
+            src={soundbathMeditationImg}
+            alt="Ava standing peacefully in meditation on a quiet beach"
+            width={1800}
+            height={1200}
+            loading="lazy"
+            className="aspect-[3/2] w-full object-cover"
+          />
+          <figcaption className="border-l border-gold/50 py-2 pl-6 font-display text-2xl leading-relaxed italic">
+            A peaceful pause for reflection, presence and renewal.
+          </figcaption>
+        </figure>
+
+        <p className="mt-10 max-w-2xl text-xs leading-relaxed text-muted-foreground">
+          Soundbath meditation is offered as a wellbeing and reflective practice.
+          It is not medical treatment or a substitute for professional care.
+        </p>
       </Section>
     </>
   );
