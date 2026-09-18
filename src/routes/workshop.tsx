@@ -10,17 +10,17 @@ import soundbathBowlsImg from "@/assets/workshops/soundbath-crystal-bowls.jpg";
 export const Route = createFileRoute("/workshop")({
   head: () => ({
     meta: [
-      { title: "Children's Art Workshop — Ava Coaching Academy" },
+      { title: "Children's & Soundbath Workshops — Ava Coaching Academy" },
       {
         name: "description",
         content:
-          "A healing, hope-filled art workshop for children led by Ava Naeini — spiritual coach, teacher and healer. Creativity, communication, ethics, faith and self-love.",
+          "Children's art workshops and restorative soundbath meditation workshops with Ava Naeini — creative spaces for healing, hope, self-love and stillness.",
       },
       { property: "og:title", content: "Workshops — Ava Coaching Academy" },
       {
         property: "og:description",
         content:
-          "Empowering children through creativity, communication, ethics, faith-based teaching and self-love. A gentle space for healing and hope.",
+          "Explore children's art workshops and soundbath meditation workshops with Ava Naeini — gentle spaces for creativity, healing, hope and stillness.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/workshop" },
