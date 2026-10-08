@@ -11,6 +11,7 @@ const NAV = [
   /* { to: "/services", label: "Services" }, */
   { to: "/workshop", label: "Workshops" },
   { to: "/books", label: "Books" },
+  { to: "/podcast", label: "Podcast" },
   { to: "/journal", label: "Journal" },
 ] as const;
 
@@ -28,7 +29,7 @@ export function SiteHeader() {
 
         {/* Desktop navigation */}
         <nav
-          className="hidden items-center gap-9 lg:flex"
+          className="hidden items-center gap-5 lg:flex"
           aria-label="Primary"
         >
           {NAV.map((item) => (

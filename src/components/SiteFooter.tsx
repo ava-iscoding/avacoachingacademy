@@ -26,6 +26,7 @@ export function SiteFooter() {
                  /* { to: "/services", label: "Services" }, */
                 { to: "/workshop", label: "Workshops" },
                 { to: "/books", label: "Books" },
+                 { to: "/podcast", label: "Podcast" },
                 { to: "/journal", label: "Journal" },
                /* { href: "https://tidycal.com/coachava2", label: "Book a Session" }, */
               ].map((l) => (

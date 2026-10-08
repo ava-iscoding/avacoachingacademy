@@ -15,6 +15,7 @@ import { Route as BookRouteImport } from './routes/book'
 import { Route as BooksRouteImport } from './routes/books'
 import { Route as JournalRouteImport } from './routes/journal'
 import { Route as PhilosophyRouteImport } from './routes/philosophy'
+import { Route as PodcastRouteImport } from './routes/podcast'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as WorkshopRouteImport } from './routes/workshop'
 
@@ -48,6 +49,11 @@ const PhilosophyRoute = PhilosophyRouteImport.update({
   path: '/philosophy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PodcastRoute = PodcastRouteImport.update({
+  id: '/podcast',
+  path: '/podcast',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -66,6 +72,7 @@ export interface FileRoutesByFullPath {
   '/books': typeof BooksRoute
   '/journal': typeof JournalRoute
   '/philosophy': typeof PhilosophyRoute
+  '/podcast': typeof PodcastRoute
   '/services': typeof ServicesRoute
   '/workshop': typeof WorkshopRoute
 }
@@ -76,6 +83,7 @@ export interface FileRoutesByTo {
   '/books': typeof BooksRoute
   '/journal': typeof JournalRoute
   '/philosophy': typeof PhilosophyRoute
+  '/podcast': typeof PodcastRoute
   '/services': typeof ServicesRoute
   '/workshop': typeof WorkshopRoute
 }
@@ -87,6 +95,7 @@ export interface FileRoutesById {
   '/books': typeof BooksRoute
   '/journal': typeof JournalRoute
   '/philosophy': typeof PhilosophyRoute
+  '/podcast': typeof PodcastRoute
   '/services': typeof ServicesRoute
   '/workshop': typeof WorkshopRoute
 }
@@ -99,6 +108,7 @@ export interface FileRouteTypes {
     | '/books'
     | '/journal'
     | '/philosophy'
+    | '/podcast'
     | '/services'
     | '/workshop'
   fileRoutesByTo: FileRoutesByTo
@@ -109,6 +119,7 @@ export interface FileRouteTypes {
     | '/books'
     | '/journal'
     | '/philosophy'
+    | '/podcast'
     | '/services'
     | '/workshop'
   id:
@@ -119,6 +130,7 @@ export interface FileRouteTypes {
     | '/books'
     | '/journal'
     | '/philosophy'
+    | '/podcast'
     | '/services'
     | '/workshop'
   fileRoutesById: FileRoutesById
@@ -130,6 +142,7 @@ export interface RootRouteChildren {
   BooksRoute: typeof BooksRoute
   JournalRoute: typeof JournalRoute
   PhilosophyRoute: typeof PhilosophyRoute
+  PodcastRoute: typeof PodcastRoute
   ServicesRoute: typeof ServicesRoute
   WorkshopRoute: typeof WorkshopRoute
 }
@@ -178,6 +191,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PhilosophyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/podcast': {
+      id: '/podcast'
+      path: '/podcast'
+      fullPath: '/podcast'
+      preLoaderRoute: typeof PodcastRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -202,6 +222,7 @@ const rootRouteChildren: RootRouteChildren = {
   BooksRoute: BooksRoute,
   JournalRoute: JournalRoute,
   PhilosophyRoute: PhilosophyRoute,
+  PodcastRoute: PodcastRoute,
   ServicesRoute: ServicesRoute,
   WorkshopRoute: WorkshopRoute,
 }
