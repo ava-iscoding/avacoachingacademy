@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import { ArrowUpRight, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PODCAST } from "@/config/podcast";
