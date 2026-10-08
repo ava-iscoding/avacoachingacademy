@@ -20,7 +20,6 @@ export const Route = createFileRoute("/podcast")({
 });
 
 function PodcastPage() {
-  const [playerOpen, setPlayerOpen] = useState(false);
   return (
     <>
       <section className="dawn px-6 py-12 text-center sm:px-10 sm:py-16">
