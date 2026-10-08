@@ -48,15 +48,7 @@ function PodcastPage() {
             </div>
             <div>
               <h2 className="mb-5 text-3xl">Listen to the episodes</h2>
-              {playerOpen ? (
-                <iframe src={PODCAST.embedUrl} title="Ava Coaching Academy podcast episodes on Spotify" width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowFullScreen className="w-full rounded-sm border-0" />
-              ) : (
-                <div className="flex min-h-[200px] flex-col items-start justify-center border-y border-border py-8">
-                  <p className="font-display text-2xl">Conscious conversations</p>
-                  <p className="mt-3 text-base text-muted-foreground">With Ava Naeini</p>
-                  <Button variant="outline" className="mt-6" onClick={() => setPlayerOpen(true)}><Headphones />Open Spotify player</Button>
-                </div>
-              )}
+              <iframe src={PODCAST.embedUrl} title="Ava Coaching Academy podcast episodes on Spotify" width="100%" height="352" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowFullScreen className="w-full rounded-sm border-0" />
               <a href={PODCAST.showUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground">All episodes on Spotify<ArrowUpRight className="h-4 w-4" /></a>
             </div>
           </div>
