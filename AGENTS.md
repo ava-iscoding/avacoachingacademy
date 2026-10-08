@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep podcast show and featured-episode links in `src/config/podcast.ts`; use Spotify's official show embed for the automatically maintained episode list without a separate feed service.
