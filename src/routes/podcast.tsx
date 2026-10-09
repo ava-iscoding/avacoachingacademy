@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PODCAST } from "@/config/podcast";
-import { PodcastEpisodes } from "@/components/PodcastEpisodes";
+import cover from "@/assets/podcast/cover.png.asset.json";
 
 // Resolve hosted artwork independently of the website's deployment origin.
 const coverUrl = new URL(cover.url, "https://avacoachingacademy.lovable.app").href;
