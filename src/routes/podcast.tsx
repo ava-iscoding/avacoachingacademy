@@ -5,6 +5,10 @@ import { PODCAST } from "@/config/podcast";
 import cover from "@/assets/podcast/cover.png.asset.json";
 import episodeCover from "@/assets/podcast/recovery.jpeg.asset.json";
 
+// Resolve hosted artwork independently of the website's deployment origin.
+const coverUrl = new URL(cover.url, "https://avacoachingacademy.lovable.app").href;
+const episodeCoverUrl = new URL(episodeCover.url, "https://avacoachingacademy.lovable.app").href;
+
 export const Route = createFileRoute("/podcast")({
   head: () => ({
     meta: [
@@ -14,6 +18,8 @@ export const Route = createFileRoute("/podcast")({
       { property: "og:description", content: "Conscious conversations for a brighter tomorrow. Listen to Ava Naeini on relationships, growth, hope and meaning." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: coverUrl },
+      { name: "twitter:image", content: coverUrl },
     ],
   }),
   component: PodcastPage,
@@ -27,7 +33,7 @@ function PodcastPage() {
           <p className="eyebrow">The podcast · Ava Naeini</p>
           <h1 className="mt-4 text-4xl leading-tight sm:text-6xl">Ava Coaching Academy</h1>
           <p className="mt-4 text-lg text-muted-foreground">Conscious conversations for a brighter tomorrow.</p>
-          <img src={cover.url} alt="Ava Coaching Academy podcast cover with Ava Naeini, a golden microphone and a sunset" width={768} height={768} className="mx-auto mt-8 aspect-square w-full max-w-[420px] object-contain" />
+          <img src={coverUrl} alt="Ava Coaching Academy podcast cover with Ava Naeini, a golden microphone and a sunset" width={1254} height={1254} fetchPriority="high" className="mx-auto mt-8 aspect-square w-full max-w-[420px] object-contain" />
           <div className="mt-7 flex justify-center">
             <Button asChild size="lg" className="h-auto whitespace-normal rounded-xs py-3">
               <a href={PODCAST.showUrl} target="_blank" rel="noopener noreferrer"><Headphones />Listen on Spotify<ArrowUpRight /></a>
@@ -58,7 +64,7 @@ function PodcastPage() {
           <p className="eyebrow">Featured episode</p>
           <div className="mt-8 grid items-start gap-10 md:grid-cols-[minmax(0,360px)_1fr] md:gap-16">
             <a href={PODCAST.featuredEpisode.url} target="_blank" rel="noopener noreferrer" aria-label="Listen to Recovery from Abusive Relationships on Spotify">
-              <img src={episodeCover.url} alt="Recovery from Abusive Relationships episode artwork: awareness, detachment, healing and empowerment" width={768} height={937} loading="lazy" className="h-auto w-full object-contain" />
+              <img src={episodeCoverUrl} alt="Recovery from Abusive Relationships episode artwork: awareness, detachment, healing and empowerment" width={1206} height={1471} loading="lazy" className="h-auto w-full object-contain" />
             </a>
             <div className="md:pt-8">
               <p className="text-sm text-muted-foreground">{PODCAST.featuredEpisode.duration}</p>
