@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PODCAST } from "@/config/podcast";
-import cover from "@/assets/podcast/cover.png.asset.json";
 import { PodcastEpisodes } from "@/components/PodcastEpisodes";
 
 // Resolve hosted artwork independently of the website's deployment origin.
