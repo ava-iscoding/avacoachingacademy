@@ -56,8 +56,6 @@ function PodcastPage() {
           </div>
         </div>
       </section>
-
-      <PodcastEpisodes />
     </>
   );
 }
