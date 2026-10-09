@@ -3,9 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { ArrowUpRight, Headphones, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PODCAST } from "@/config/podcast";
-import episodeCover from "@/assets/podcast/recovery.jpeg.asset.json";
 
-const recoveryCoverUrl = new URL(episodeCover.url, "https://avacoachingacademy.lovable.app").href;
 const itunesNamespace = "http://www.itunes.com/dtds/podcast-1.0.dtd";
 
 function safeUrl(value: string | null | undefined) {
@@ -33,8 +31,8 @@ async function fetchEpisodes() {
       description,
       date: Number.isFinite(date) ? date : null,
       duration: item.getElementsByTagNameNS(itunesNamespace, "duration")[0]?.textContent?.trim(),
-      image: guid === PODCAST.featuredEpisode.guid ? recoveryCoverUrl : safeUrl(item.getElementsByTagNameNS(itunesNamespace, "image")[0]?.getAttribute("href")),
-      link: guid === PODCAST.featuredEpisode.guid ? PODCAST.featuredEpisode.url : safeUrl(item.querySelector("link")?.textContent?.trim()) || PODCAST.showUrl,
+      image: safeUrl(item.getElementsByTagNameNS(itunesNamespace, "image")[0]?.getAttribute("href")),
+      link: safeUrl(item.querySelector("link")?.textContent?.trim()) || PODCAST.showUrl,
       audio: safeUrl(item.querySelector("enclosure")?.getAttribute("url")),
     };
   }).sort((a, b) => (b.date || 0) - (a.date || 0));
