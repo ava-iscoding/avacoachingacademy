@@ -3,11 +3,10 @@ import { ArrowUpRight, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PODCAST } from "@/config/podcast";
 import cover from "@/assets/podcast/cover.png.asset.json";
-import episodeCover from "@/assets/podcast/recovery.jpeg.asset.json";
+import { PodcastEpisodes } from "@/components/PodcastEpisodes";
 
 // Resolve hosted artwork independently of the website's deployment origin.
 const coverUrl = new URL(cover.url, "https://avacoachingacademy.lovable.app").href;
-const episodeCoverUrl = new URL(episodeCover.url, "https://avacoachingacademy.lovable.app").href;
 
 export const Route = createFileRoute("/podcast")({
   head: () => ({
@@ -59,24 +58,7 @@ function PodcastPage() {
         </div>
       </section>
 
-      <section className="bg-sand px-6 py-16 sm:px-10 sm:py-20">
-        <div className="mx-auto max-w-6xl">
-          <p className="eyebrow">Featured episode</p>
-          <div className="mt-8 grid items-start gap-10 md:grid-cols-[minmax(0,360px)_1fr] md:gap-16">
-            <a href={PODCAST.featuredEpisode.url} target="_blank" rel="noopener noreferrer" aria-label="Listen to Recovery from Abusive Relationships on Spotify">
-              <img src={episodeCoverUrl} alt="Recovery from Abusive Relationships episode artwork: awareness, detachment, healing and empowerment" width={1206} height={1471} loading="lazy" className="h-auto w-full object-contain" />
-            </a>
-            <div className="md:pt-8">
-              <p className="text-sm text-muted-foreground">{PODCAST.featuredEpisode.duration}</p>
-              <h2 className="mt-4 max-w-xl text-3xl leading-tight sm:text-4xl">{PODCAST.featuredEpisode.title}</h2>
-              <p className="mt-6 max-w-lg text-base leading-[1.9] text-muted-foreground">{PODCAST.featuredEpisode.description}</p>
-              <Button asChild size="lg" className="mt-8 h-auto whitespace-normal rounded-xs py-3">
-                <a href={PODCAST.featuredEpisode.url} target="_blank" rel="noopener noreferrer"><Headphones />Listen to this episode<ArrowUpRight /></a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PodcastEpisodes />
     </>
   );
 }
