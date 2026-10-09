@@ -9,5 +9,5 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Keep podcast show and featured-episode links in `src/config/podcast.ts`; use Spotify's official show embed for the automatically maintained episode list without a separate feed service.
+- Keep podcast links and the RSS feed in `src/config/podcast.ts`; fetch the public CORS-enabled RSS in the browser for automatic episode listings without a feed service, while retaining Spotify's official player.
 - Resolve podcast artwork pointers against the stable published Lovable asset origin, not the current page origin, so external deployments can load the uploaded covers.
