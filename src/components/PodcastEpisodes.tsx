@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { ArrowUpRight, Headphones, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PODCAST } from "@/config/podcast";
+
 const itunesNamespace = "http://www.itunes.com/dtds/podcast-1.0.dtd";
 
 function safeUrl(value: string | null | undefined) {
